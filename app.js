@@ -2,6 +2,9 @@
   let options = INSTALL_OPTIONS
 
   function updateElement() {
+    Select.init({
+      className: options.theme
+    })
   }
 
   if (document.readyState === "loading") {
@@ -13,9 +16,14 @@
 
   INSTALL_SCOPE = {
     setOptions(nextOptions) {
-      options = nextOptions
+      const elements = Array.prototype.slice.call(document.querySelectorAll("." + options.theme))
 
-      updateElement()
+      elements.forEach(element => {
+        element.classList.remove(options.theme)
+        element.classList.add(nextOptions.theme)
+      })
+
+      options = nextOptions
     }
   }
 }())

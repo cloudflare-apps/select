@@ -1,9 +1,25 @@
 {
   "resources": {
-    "body": [
+    "head": [
       {
         "type": "style",
-        "src": "./build/app.css"
+        "src": "./vendor/select-theme-default.css"
+      },
+      {
+        "type": "style",
+        "src": "./vendor/select-theme-dark.css"
+      },
+      {
+        "type": "style",
+        "src": "./vendor/select-theme-chosen.css"
+      },
+      {
+        "type": "script",
+        "src": "./vendor/tether.min.js"
+      },
+      {
+        "type": "script",
+        "src": "./vendor/select.min.js"
       },
       {
         "type": "script",
@@ -21,6 +37,22 @@
   },
   "options": {
     "properties": {
+      "theme": {
+        "order": 1,
+        "title": "Theme",
+        "type": "string",
+        "default": "select-theme-default",
+        "enum": [
+          "select-theme-default",
+          "select-theme-dark",
+          "select-theme-chosen"
+        ],
+        "enumNames": {
+          "select-theme-default": "Default Theme",
+          "select-theme-dark": "Dark Theme",
+          "select-theme-chosen": "Chosen Theme"
+        }
+      }
     }
   }
 }
