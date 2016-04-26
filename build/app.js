@@ -5,7 +5,8 @@
 
   function updateElement() {
     Select.init({
-      className: options.theme });
+      className: options.theme
+    });
   }
 
   if (document.readyState === "loading") {
@@ -18,12 +19,10 @@
     setOptions: function setOptions(nextOptions) {
       var elements = Array.from(document.querySelectorAll("." + options.theme));
 
-      function changeArrayOptions(element) {
+      elements.forEach(function (element) {
         element.classList.remove(options.theme);
         element.classList.add(nextOptions.theme);
-      }
-
-      elements.forEach(changeArrayOptions);
+      });
 
       options = nextOptions;
     }
