@@ -17,7 +17,7 @@
 
   INSTALL_SCOPE = {
     setOptions: function setOptions(nextOptions) {
-      var elements = Array.from(document.querySelectorAll("." + options.theme));
+      var elements = Array.prototype.slice.call(document.querySelectorAll("." + options.theme));
 
       elements.forEach(function (element) {
         element.classList.remove(options.theme);
