@@ -3,7 +3,10 @@
 (function () {
   var options = INSTALL_OPTIONS;
 
-  function updateElement() {}
+  function updateElement() {
+    Select.init({
+      className: options.theme });
+  }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", updateElement);

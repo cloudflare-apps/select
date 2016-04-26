@@ -2,6 +2,8 @@
   let options = INSTALL_OPTIONS
 
   function updateElement() {
+    Select.init({
+    className: options.theme})
   }
 
   if (document.readyState === "loading") {
