@@ -3,7 +3,7 @@
 
   function updateElement() {
     Select.init({
-    className: options.theme})
+      className: options.theme})
   }
 
   if (document.readyState === "loading") {
@@ -15,9 +15,16 @@
 
   INSTALL_SCOPE = {
     setOptions(nextOptions) {
-      options = nextOptions
+      const elements = Array.from(document.querySelectorAll("." + options.theme))
 
-      updateElement()
+      function changeArrayOptions(element) {
+        element.classList.remove(options.theme)
+        element.classList.add(nextOptions.theme)
+      }
+
+      elements.forEach(changeArrayOptions)
+
+      options = nextOptions
     }
   }
 }())

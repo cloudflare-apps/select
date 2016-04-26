@@ -16,9 +16,16 @@
 
   INSTALL_SCOPE = {
     setOptions: function setOptions(nextOptions) {
-      options = nextOptions;
+      var elements = Array.from(document.querySelectorAll("." + options.theme));
 
-      updateElement();
+      function changeArrayOptions(element) {
+        element.classList.remove(options.theme);
+        element.classList.add(nextOptions.theme);
+      }
+
+      elements.forEach(changeArrayOptions);
+
+      options = nextOptions;
     }
   };
 })();
