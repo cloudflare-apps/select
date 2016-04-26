@@ -41,7 +41,7 @@
         "order": 1,
         "title": "Theme",
         "type": "string",
-        "default": "select-theme-dark",
+        "default": "select-theme-default",
         "enum": [
           "select-theme-default",
           "select-theme-dark",
