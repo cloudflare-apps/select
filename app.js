@@ -18,10 +18,14 @@
     setOptions(nextOptions) {
       const elements = Array.prototype.slice.call(document.querySelectorAll("." + options.theme))
 
-      elements.forEach(element => {
-        element.classList.remove(options.theme)
-        element.classList.add(nextOptions.theme)
-      })
+      if (!document.documentElement.classList){
+      }
+      else {
+        elements.forEach(element => {
+          element.classList.remove(options.theme)
+          element.classList.add(nextOptions.theme)
+        })
+      }
 
       options = nextOptions
     }
