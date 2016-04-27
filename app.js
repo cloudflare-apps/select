@@ -16,6 +16,8 @@
 
   INSTALL_SCOPE = {
     setOptions(nextOptions) {
+      if (!document.body.classList) return
+
       const elements = Array.prototype.slice.call(document.querySelectorAll("." + options.theme))
 
       elements.forEach(element => {
