@@ -16,16 +16,14 @@
 
   INSTALL_SCOPE = {
     setOptions(nextOptions) {
+      if (!document.body.classList) return
+
       const elements = Array.prototype.slice.call(document.querySelectorAll("." + options.theme))
 
-      if (!document.documentElement.classList){
-      }
-      else {
-        elements.forEach(element => {
-          element.classList.remove(options.theme)
-          element.classList.add(nextOptions.theme)
-        })
-      }
+      elements.forEach(element => {
+        element.classList.remove(options.theme)
+        element.classList.add(nextOptions.theme)
+      })
 
       options = nextOptions
     }

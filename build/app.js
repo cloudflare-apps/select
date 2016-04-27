@@ -17,14 +17,14 @@
 
   INSTALL_SCOPE = {
     setOptions: function setOptions(nextOptions) {
+      if (!document.body.classList) return;
+
       var elements = Array.prototype.slice.call(document.querySelectorAll("." + options.theme));
 
-      if (!document.documentElement.classList) {} else {
-        elements.forEach(function (element) {
-          element.classList.remove(options.theme);
-          element.classList.add(nextOptions.theme);
-        });
-      }
+      elements.forEach(function (element) {
+        element.classList.remove(options.theme);
+        element.classList.add(nextOptions.theme);
+      });
 
       options = nextOptions;
     }
