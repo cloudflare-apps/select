@@ -48,9 +48,9 @@
           "select-theme-chosen"
         ],
         "enumNames": {
-          "select-theme-default": "Default Theme",
-          "select-theme-dark": "Dark Theme",
-          "select-theme-chosen": "Chosen Theme"
+          "select-theme-default": "Light",
+          "select-theme-dark": "Dark",
+          "select-theme-chosen": "Compact"
         }
       }
     }
