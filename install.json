@@ -3,15 +3,7 @@
     "head": [
       {
         "type": "style",
-        "src": "./vendor/select-theme-default.css"
-      },
-      {
-        "type": "style",
-        "src": "./vendor/select-theme-dark.css"
-      },
-      {
-        "type": "style",
-        "src": "./vendor/select-theme-chosen.css"
+        "src": "./vendor/select-theme-{{options.theme}}.css"
       },
       {
         "type": "script",
@@ -27,30 +19,22 @@
       }
     ]
   },
-  "preview": {
-    "handlers": [
-      {
-        "options": ["*"],
-        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
-      }
-    ]
-  },
   "options": {
     "properties": {
       "theme": {
         "order": 1,
         "title": "Theme",
         "type": "string",
-        "default": "select-theme-default",
+        "default": "default",
         "enum": [
-          "select-theme-default",
-          "select-theme-dark",
-          "select-theme-chosen"
+          "default",
+          "dark",
+          "chosen"
         ],
         "enumNames": {
-          "select-theme-default": "Light",
-          "select-theme-dark": "Dark",
-          "select-theme-chosen": "Compact"
+          "default": "Light",
+          "dark": "Dark",
+          "chosen": "Compact"
         }
       }
     }
