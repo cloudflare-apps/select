@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "watch:js": "babel --watch --out-dir build app.js",
-    "build": "NODE_ENV=production babel --out-dir build app.js"
+    "build": "NODE_ENV=production babel --out-dir build app.js",
+    "lint": "standard ./source/**/*.js || true"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,14 @@
     "babel-eslint": "5.0.0",
     "babel-preset-es2015": "6.3.13",
     "babel-preset-stage-0": "6.3.13",
-    "eslint": "2.2.0",
-    "eslint-loader": "1.3.0",
-    "eslint-plugin-babel": "3.1.0",
-    "postcss-cli": "2.5.1"
+    "standard": "^9.0.2"
+  },
+  "standard": {
+    "globals": [
+      "INSTALL",
+      "INSTALL_OPTIONS",
+      "INSTALL_SCOPE",
+      "INSTALL_ID"
+    ]
   }
 }
