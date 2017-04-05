@@ -15,11 +15,11 @@
       },
       {
         "type": "script",
-        "src": "./vendor/tether.min.js"
+        "src": "./vendor/tether.js"
       },
       {
         "type": "script",
-        "src": "./vendor/select.min.js"
+        "src": "./vendor/select.js"
       },
       {
         "type": "script",

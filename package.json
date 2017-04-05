@@ -1,23 +1,22 @@
 {
-  "name": "eager-select",
+  "name": "cloudflare-apps-select",
   "version": "0.0.0",
-  "description": "Styleable select elements built on Tether [Eager](https://eager.io).",
+  "description": "Styleable select elements built on Tether",
   "main": "app.js",
   "scripts": {
     "watch:js": "babel --watch --out-dir build app.js",
-    "watch:css": "postcss --watch --use autoprefixer -o build/app.css app.css",
-    "build": "NODE_ENV=production babel --out-dir build app.js && postcss --use autoprefixer -o build/app.css app.css"
+    "build": "NODE_ENV=production babel --out-dir build app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EagerApps/Select.git"
+    "url": "git+https://github.com/CloudflareApps/Select.git"
   },
-  "author": "Eager",
+  "author": "Cloudflare Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EagerApps/Select/issues"
+    "url": "https://github.com/CloudflareApps/Select/issues"
   },
-  "homepage": "https://github.com/EagerApps/Select#readme",
+  "homepage": "https://github.com/CloudflareApps/Select#readme",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "6.3.6",
